@@ -6,15 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | 小姚小摆</title>
+  <title>微信小程序对象数组操作 | 小姚小摆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小姚小摆">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="在开发中遇到一个需要增加商品规格的需求，特此记录 此需求主要是考察了对对象数组的增删。 需求效果需求要求实现效果如下：固定两个规格，规格下面有分许多种类。然后进行组合 实现这个需求，需要先理清逻辑，首先，我们前端要做的就是考虑如何给后端传数据，所以，我们先看后端需要我们如何给他传规格数据。  只看图片可能看不太懂，后台是php，转换出来格式如下 所以，我们只要将这些数据填入到这些key中即可。 代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序对象数组操作">
+<meta property="og:url" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="小姚小摆">
+<meta property="og:description" content="在开发中遇到一个需要增加商品规格的需求，特此记录 此需求主要是考察了对对象数组的增删。 需求效果需求要求实现效果如下：固定两个规格，规格下面有分许多种类。然后进行组合 实现这个需求，需要先理清逻辑，首先，我们前端要做的就是考虑如何给后端传数据，所以，我们先看后端需要我们如何给他传规格数据。  只看图片可能看不太懂，后台是php，转换出来格式如下 所以，我们只要将这些数据填入到这些key中即可。 代">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/firstStep.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/secondStep.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/upload.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/need.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/one.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/two.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/data.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/name.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/nameOpera.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/hiddenTwo.png">
+<meta property="article:published_time" content="2020-07-24T08:52:41.000Z">
+<meta property="article:modified_time" content="2020-07-24T09:53:37.042Z">
 <meta property="article:author" content="Mr.yao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/firstStep.png">
   
     <link rel="alternative" href="/atom.xml" title="小姚小摆" type="application/atom+xml">
   
@@ -138,343 +153,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-微信小程序对象数组操作" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      微信小程序对象数组操作
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+	  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+  
 <a href="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" class="archive-article-date">
   	<time datetime="2020-07-24T08:52:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/">微信小程序对象数组操作</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在开发中遇到一个需要增加商品规格的需求，特此记录</p>
+<p>此需求主要是考察了对对象数组的增删。</p>
+<h2 id="需求效果"><a href="#需求效果" class="headerlink" title="需求效果"></a>需求效果</h2><p>需求要求实现效果如下：固定两个规格，规格下面有分许多种类。然后进行组合<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/firstStep.png" alt="第一步"><br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/secondStep.png" alt="第二步"></p>
+<p>实现这个需求，需要先理清逻辑，首先，我们前端要做的就是考虑如何给后端传数据，所以，我们先看后端需要我们如何给他传规格数据。</p>
+<p><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/upload.png" alt="需求图片"></p>
+<p>只看图片可能看不太懂，后台是php，转换出来格式如下<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/need.png" alt="data"></p>
+<p>所以，我们只要将这些数据填入到这些key中即可。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h3><p>wxml不多解释，需要注意点是规格“一”、“二”标题数字的转化<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/one.png" alt="第一步"><br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/two.png" alt="第二步"></p>
+<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><p>1、基本的对象数组进行声明<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/data.png" alt="data"></p>
+<p>2、同步输入规格标题和名字并同时修改数组<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/name.png" alt="规格名字标题输入"></p>
+<p>在点击下一步之前，我们还有增加删除和隐藏（删除）操作，具体实现如下</p>
+<p>删除名字增加名字操作：<br><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/nameOpera.png" alt="删除名字"></p>
+<p>隐藏操作，需要注意wxml对增加按钮的另外操作，因为我们声明的规格数组中没有删除按钮<br>注意先声明按钮数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data: &#123;</span><br><span class="line">	btnShow: [<span class="literal">true</span>,<span class="literal">true</span>],//增加按钮是否显示	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/hiddenTwo.png" alt="隐藏规格二"></p>
+<p>3、进入下一步</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">// 进入下一步</span><br><span class="line">  <span class="function"><span class="title">next</span></span>()&#123;</span><br><span class="line">    var that = this</span><br><span class="line">    console.log(<span class="string">'attr'</span>,that.data.attr)</span><br><span class="line">    var temporary = []</span><br><span class="line">    const title_1 = that.data.attr[0].attr_name</span><br><span class="line">    const title_2 = that.data.attr[1].attr_name</span><br><span class="line">    <span class="keyword">if</span> (title_1 &amp;&amp; title_2) &#123;</span><br><span class="line">      <span class="keyword">if</span> (title_1 === title_2) &#123;</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          title: <span class="string">'规格标题不能相同'</span>,</span><br><span class="line">          icon: <span class="string">'none'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        console.log(title_1,title_2)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!title_1) &#123;</span><br><span class="line">      wx.showToast(&#123;</span><br><span class="line">        title: <span class="string">'请输入规格一'</span>,</span><br><span class="line">        icon: <span class="string">'none'</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (title_2) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!that.data.attr[1].attr_values[0]  &amp;&amp; !that.data.attr[1].attr_values[1]) &#123;</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          title: <span class="string">'规格二有值，规格二名字不能为空'</span>,</span><br><span class="line">          icon: <span class="string">'none'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (that.data.attr[1].attr_values[0] == that.data.attr[1].attr_values[1] &amp;&amp; (that.data.attr[1].attr_values[0] || that.data.attr[1].attr_values[1])) &#123;</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          title: <span class="string">'规格二名字存在相同'</span>,</span><br><span class="line">          icon: <span class="string">'none'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (title_1) &#123;</span><br><span class="line">      <span class="keyword">if</span> (that.data.attr[0].attr_values[0] == <span class="string">''</span> &amp;&amp; that.data.attr[0].attr_values[1] == <span class="string">''</span>) &#123;</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          title: <span class="string">'规格一有值，规格一名字不能为空'</span>,</span><br><span class="line">          icon: <span class="string">'none'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (that.data.attr[0].attr_values[0] == that.data.attr[0].attr_values[1]) &#123;</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">          title: <span class="string">'规格一名字存在相同'</span>,</span><br><span class="line">          icon: <span class="string">'none'</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">return</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    that.data.attr[0].attr_values.forEach(color =&gt; &#123;</span><br><span class="line">      // 如果标题二存在</span><br><span class="line">      <span class="keyword">if</span> (title_2) &#123;</span><br><span class="line">        that.data.attr[1].attr_values.forEach(size =&gt; &#123;  </span><br><span class="line">          //如果存在空，则不加入对象（去除空格操作）</span><br><span class="line">          <span class="keyword">if</span> (!color || !size) &#123; <span class="built_in">return</span> &#125;</span><br><span class="line">          // 声明新的对象detail</span><br><span class="line">          <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="built_in">let</span> detail = &#123;</span><br><span class="line">              [title_1]: color,</span><br><span class="line">              [title_2]: size</span><br><span class="line">            &#125;</span><br><span class="line">            temporary.push(&#123; detail &#125;)</span><br><span class="line">          &#125;    </span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;<span class="keyword">else</span> &#123; //只存在标题一</span><br><span class="line">        <span class="keyword">if</span> (!color) &#123; <span class="built_in">return</span> &#125;</span><br><span class="line">        <span class="built_in">let</span> detail = &#123;</span><br><span class="line">          [title_1]: color</span><br><span class="line">        &#125;</span><br><span class="line">        temporary.push(&#123; detail &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    //如果存在list，即是编辑进来</span><br><span class="line">    <span class="keyword">if</span> (that.data.List) &#123;</span><br><span class="line">      temporary.forEach((items, i)=&gt; &#123;</span><br><span class="line">        console.log(items)</span><br><span class="line">        <span class="keyword">if</span> (that.data.List[i]) &#123;</span><br><span class="line">          items.id = that.data.List[i].id</span><br><span class="line">          items.shop_price = that.data.List[i].shop_price</span><br><span class="line">          that.data.List[i].detail = items.detail</span><br><span class="line">          <span class="keyword">if</span> (that.data.List[i].store_count == null ) &#123;</span><br><span class="line">            that.data.List[i].store_count = <span class="string">'无限'</span></span><br><span class="line">            items.store_count =  that.data.List[i].store_count</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            items.store_count =  that.data.List[i].store_count</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="built_in">return</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(<span class="string">'12345789'</span>,that.data.List)</span><br><span class="line">    console.log(<span class="string">'temporary'</span>,temporary)</span><br><span class="line">    // 判断是不是第n次进入规格</span><br><span class="line">    <span class="keyword">if</span> (this.data.List.length) &#123;</span><br><span class="line">      // 更新temporary</span><br><span class="line">      temporary = temporary.map((titem) =&gt; &#123;</span><br><span class="line">        this.data.List.forEach(item =&gt; &#123;</span><br><span class="line">          // 如果新数组包含老数组一样内容，则新数组覆盖老数组</span><br><span class="line">          <span class="keyword">if</span> (JSON.stringify(item.detail) === JSON.stringify(titem.detail)) &#123;</span><br><span class="line">            titem = item</span><br><span class="line">            titem.id = item.id</span><br><span class="line">            titem.shop_price = item.shop_price</span><br><span class="line">            titem.store_count = item.store_count</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">return</span> titem;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    console.log(<span class="string">'temporary'</span>,temporary)</span><br><span class="line">    //赋值数组进入最终步骤</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      List: temporary,</span><br><span class="line">      SpecificationsPopup_second: <span class="literal">true</span>,</span><br><span class="line">      SpecificationsPopup_first: <span class="literal">false</span></span><br><span class="line">    &#125;)</span><br><span class="line">    console.log(<span class="string">'List'</span>,that.data.List)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>4、同步价格库存加入数组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">blur(e)&#123;</span><br><span class="line">   var that = this</span><br><span class="line">   var index = e.currentTarget.dataset.listindex</span><br><span class="line">   var flag = e.currentTarget.dataset.flag</span><br><span class="line">   var all = that.data.List</span><br><span class="line">   // console.log(<span class="string">'---------all------'</span>, that.data.List, that.data.value)</span><br><span class="line">   // 价格输入</span><br><span class="line">   <span class="keyword">if</span>(flag == <span class="string">"0"</span>)&#123;</span><br><span class="line">     all[index].shop_price = e.detail.value </span><br><span class="line">   &#125;</span><br><span class="line">   // 库存输入</span><br><span class="line">   <span class="keyword">if</span>(flag == <span class="string">"1"</span>)&#123;</span><br><span class="line">     all[index].store_count = e.detail.value</span><br><span class="line">   &#125;</span><br><span class="line">   that.setData(&#123;</span><br><span class="line">     List: all</span><br><span class="line">   &#125;)</span><br><span class="line">   console.log(that.data.List)</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
 
+<p>5、还记得在第一步我们加入了标题“一”“二”吗，在最后要去除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//删除标题索引</span><br><span class="line">var newAttr = []</span><br><span class="line">that.data.attr.forEach(item =&gt; &#123;</span><br><span class="line">  delete item.oneOrTwo</span><br><span class="line">  <span class="keyword">if</span>(!item.attr_name) &#123; <span class="built_in">return</span> &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">    newAttr.push(item)</span><br><span class="line">  &#125;</span><br><span class="line">  that.setData(&#123;</span><br><span class="line">    newAttr: newAttr</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">// console.log(that.data.newAttr)</span><br><span class="line"><span class="keyword">if</span>(!that.data.newAttr)&#123;</span><br><span class="line">  that.setData(&#123;</span><br><span class="line">    newAttr: []</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6.把得到的规格数组对象重新组合发给后台</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var List = &#123;&#125;</span><br><span class="line">var attr = that.data.newAttr</span><br><span class="line">var value = that.data.List</span><br><span class="line">List[<span class="string">'attr'</span>] = attr</span><br><span class="line">List[<span class="string">'value'</span>] = value</span><br><span class="line">console.log(<span class="string">'--------List--------'</span>,List)</span><br><span class="line">//后台需要的是json格式</span><br><span class="line">var josn_arrays = JSON.stringify(List)</span><br><span class="line">console.log(<span class="string">'最终attr'</span>,that.data.attr)</span><br><span class="line">console.log(<span class="string">'最终List'</span>,that.data.List)</span><br><span class="line">console.log(josn_arrays)</span><br></pre></td></tr></table></figure>
+
+<p>这样，就完成了这个规格添加的操作。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubaopay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2020-07-24T08:11:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">小程序逆地址解析</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/">小程序逆地址解析</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求效果"><span class="toc-number">1.</span> <span class="toc-text">需求效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">2.</span> <span class="toc-text">代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#wxml"><span class="toc-number">2.1.</span> <span class="toc-text">wxml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js"><span class="toc-number">2.2.</span> <span class="toc-text">js</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/02/%E5%9B%BE%E7%89%87%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%AE%9E%E7%8E%B0%E6%A0%B7%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-06-02T02:56:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/02/%E5%9B%BE%E7%89%87%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%AE%9E%E7%8E%B0%E6%A0%B7%E5%BC%8F/">图片九宫格实现样式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%AF%B9%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2020-06-02T02:32:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%AF%B9%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC/">微信小程序请求时对数组对象赋值</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">数组动态赋值</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/28/vue-cli%E5%B0%81%E8%A3%85%E5%85%A8%E5%B1%80axios%E3%80%81%E8%AF%B7%E6%B1%82/" class="archive-article-date">
-  	<time datetime="2020-05-28T08:03:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/vue-cli%E5%B0%81%E8%A3%85%E5%85%A8%E5%B1%80axios%E3%80%81%E8%AF%B7%E6%B1%82/">vue-cli封装全局axios</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/" class="archive-article-date">
-  	<time datetime="2020-05-28T06:44:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/">微信小程序请求封装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">请求</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/28/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-28T03:23:11.145Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/05/27/%E4%BD%BF%E7%94%A8hexo-github%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-05-27T06:19:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/%E4%BD%BF%E7%94%A8hexo-github%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2/">使用hexo+github建立博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -508,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

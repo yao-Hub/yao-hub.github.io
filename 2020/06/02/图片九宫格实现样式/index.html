@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/06/02/%E5%9B%BE%E7%89%87%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%AE%9E%E7%8E%B0%E6%A0%B7%E5%BC%8F/text1.png">
 <meta property="og:image" content="http://yoursite.com/2020/06/02/%E5%9B%BE%E7%89%87%E4%B9%9D%E5%AE%AB%E6%A0%BC%E5%AE%9E%E7%8E%B0%E6%A0%B7%E5%BC%8F/%E4%B9%9D%E5%AE%AB%E6%A0%BC.png">
 <meta property="article:published_time" content="2020-06-02T02:56:23.000Z">
-<meta property="article:modified_time" content="2020-06-02T03:55:46.604Z">
+<meta property="article:modified_time" content="2020-07-24T08:19:42.489Z">
 <meta property="article:author" content="Mr.yao">
 <meta property="article:tag" content="微信小程序">
 <meta property="article:tag" content="css">
@@ -213,23 +213,7 @@
 <p>2.清除浮动，当子元素浮动时，给父元素添加overflow：hidden，按照它的第一个特性，应该将子元素超出的部分截掉，但是因为子元素有浮动，无法裁剪，所有只能由父元素增加高度去包裹住子元素，使得父元素拥有了高度，而这个高度是跟随子元素自适应的高度，这样就把浮动的子元素包含在父元素内了。</p>
 <h3 id="after-伪类"><a href="#after-伪类" class="headerlink" title="::after 伪类"></a>::after 伪类</h3><p>利用伪类来清楚浮动，其效果跟创建一个空的div并设置其为clear：both；是一样的，只不过这里用伪类代替了空的div元素</p>
 <p>这次需求不太适合使用这个方法，因为请求的子元素通过遍历渲染，通过伪类会增加遍历长度伪类，无法实现预期效果，如何增加伪类清除浮动代码如下：</p>
-<view class="father">
-
-<pre><code>&lt;view class=&quot;son&quot;&gt;&lt;/view&gt;</code></pre></view>
-
-
-<p>.box{</p>
-<pre><code>width:400px;
-
-background:#F00;</code></pre><p>}</p>
-<p>.son{</p>
-<pre><code>float:left;</code></pre><p>}</p>
-<p>.son::after {</p>
-<pre><code>content:&quot;&quot;;
-
-clear:both;/*清除浮动*/
-
-display:block;/*确保该元素是一个块级元素*/</code></pre><p>}</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=<span class="string">"father"</span>&gt;</span><br><span class="line">    </span><br><span class="line">	&lt;view class=<span class="string">"son"</span>&gt;&lt;/view&gt;</span><br><span class="line"></span><br><span class="line">&lt;/view&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">.box&#123;</span><br><span class="line">    </span><br><span class="line">	width:400px;</span><br><span class="line">    </span><br><span class="line">	background:<span class="comment">#F00;</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.son&#123;</span><br><span class="line">    </span><br><span class="line">	<span class="built_in">float</span>:left;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.son::after &#123;</span><br><span class="line">    </span><br><span class="line">	content:<span class="string">""</span>;</span><br><span class="line">    </span><br><span class="line">	clear:both;/*清除浮动*/</span><br><span class="line">    </span><br><span class="line">	display:block;/*确保该元素是一个块级元素*/</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -347,6 +331,15 @@ display:block;/*确保该元素是一个块级元素*/</code></pre><p>}</p>
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          小程序逆地址解析
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AF%B7%E6%B1%82%E6%97%B6%E5%AF%B9%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1%E8%B5%8B%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
