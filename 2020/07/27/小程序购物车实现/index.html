@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/7 | 小姚小摆</title>
+  <title>小程序购物车实现 | 小姚小摆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小姚小摆">
-<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
+  <meta name="description" content="需求截图 需求实现一、单选 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566checks: function (e) &amp;#123;    var that &#x3D; this;    &#x2F;&#x2F; 设置下标">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序购物车实现">
+<meta property="og:url" content="http://yoursite.com/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="小姚小摆">
+<meta property="og:description" content="需求截图 需求实现一、单选 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566checks: function (e) &amp;#123;    var that &#x3D; this;    &#x2F;&#x2F; 设置下标">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/carone.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/cartwo.png">
+<meta property="article:published_time" content="2020-07-27T01:01:23.000Z">
+<meta property="article:modified_time" content="2020-07-27T01:20:34.521Z">
 <meta property="article:author" content="Mr.yao">
+<meta property="article:tag" content="微信小程序">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/carone.png">
   
     <link rel="alternative" href="/atom.xml" title="小姚小摆" type="application/atom+xml">
   
@@ -138,37 +146,83 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-小程序购物车实现" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      小程序购物车实现
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
+	<!-- 不蒜子统计 -->
+	<span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+	  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+	</span>
+  
 <a href="/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
   	<time datetime="2020-07-27T01:01:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/">小程序购物车实现</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h2 id="需求截图"><a href="#需求截图" class="headerlink" title="需求截图"></a>需求截图</h2><p><img src="/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/carone.png" alt="结算"><br><img src="/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/cartwo.png" alt="删除"></p>
+<h2 id="需求实现"><a href="#需求实现" class="headerlink" title="需求实现"></a>需求实现</h2><p>一、单选</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">checks: <span class="keyword">function</span> (e) &#123;</span><br><span class="line">    var that = this;</span><br><span class="line">    // 设置下标</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      idx: e.currentTarget.dataset.index</span><br><span class="line">    &#125;)</span><br><span class="line">    //list是购物车列表，这里已经先请求了数据</span><br><span class="line">    that.data.list[that.data.idx].flag = !that.data.list[that.data.idx].flag;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      list: that.data.list</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">if</span> (that.data.list[that.data.idx].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">      // 设置id(删除需要id)</span><br><span class="line">      var idnum = <span class="string">''</span></span><br><span class="line">      // 将选中的商品id拼接在一起 eg:<span class="string">'307,308,313'</span></span><br><span class="line">      <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (that.data.list[i].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (idnum == <span class="string">''</span>) &#123;</span><br><span class="line">            idnum += that.data.list[i].id;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            idnum += <span class="string">','</span> + that.data.list[i].id;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      var bbs = that.data.list[that.data.idx].shop_price * that.data.list[that.data.idx].goods_num + that.data.totle;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        totle: Math.round(bbs * 100) / 100, //点击单选框计算价格</span><br><span class="line">        id: idnum</span><br><span class="line">      &#125;)</span><br><span class="line">      // 判断当选中的时候，循环一次，如果当中有复选框为<span class="literal">true</span>的时候，全选为<span class="literal">true</span>，否则为<span class="literal">false</span></span><br><span class="line">      var str = <span class="string">''</span>;</span><br><span class="line">      <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">        // console.log(that.data.list[i].flag)</span><br><span class="line">        str += that.data.list[i].flag</span><br><span class="line">        <span class="keyword">if</span> (str.indexOf(<span class="literal">true</span>) &gt; -1) &#123;</span><br><span class="line">          console.log(1)</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            flag: <span class="literal">true</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          that.setData(&#123;</span><br><span class="line">            flag: <span class="literal">false</span></span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (that.data.list[that.data.idx].flag == <span class="literal">true</span>) &#123;</span><br><span class="line">      // 设置id(删除需要id)</span><br><span class="line">      var idnum = <span class="string">''</span></span><br><span class="line">      // 将选中的商品id拼接在一起 eg:<span class="string">'307,308,313'</span></span><br><span class="line">      <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (that.data.list[i].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (idnum == <span class="string">''</span>) &#123;</span><br><span class="line">            idnum += that.data.list[i].id;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            idnum += <span class="string">','</span> + that.data.list[i].id;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      var bbs = that.data.totle - that.data.list[that.data.idx].shop_price * that.data.list[that.data.idx].goods_num;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        totle: Math.round(bbs * 100) / 100, //点击单选框计算价格</span><br><span class="line">        flag: <span class="literal">true</span>, //全选为<span class="literal">true</span></span><br><span class="line">        id: idnum</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p>二、全选</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">checksss: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'Select all'</span>)</span><br><span class="line">    var that = this;</span><br><span class="line">    that.data.flag = !that.data.flag</span><br><span class="line">    //全不选</span><br><span class="line">    <span class="keyword">if</span> (that.data.flag == <span class="literal">true</span>) &#123;</span><br><span class="line">      <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">        that.data.list[i].flag = <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        totle: 0,</span><br><span class="line">        id: <span class="string">''</span>,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (that.data.flag == <span class="literal">false</span>) &#123; //全选中</span><br><span class="line">      var totle = null</span><br><span class="line">      //重新赋值，清除第一次统计，防止二次全选叠加值</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        totle: 0,</span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (that.data.list[i].deleted!=1) &#123;</span><br><span class="line">          totle += that.data.list[i].shop_price * that.data.list[i].goods_num + that.data.totle;</span><br><span class="line">        &#125;</span><br><span class="line">        that.data.list[i].flag = <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        totle: Math.round(totle * 100) / 100,</span><br><span class="line">      &#125;)</span><br><span class="line">      // 全选删除时获取全部id</span><br><span class="line">      var idp = [];</span><br><span class="line">      console.log(that.data.list)</span><br><span class="line">      that.data.list.forEach(item =&gt; &#123;</span><br><span class="line">        //去除已下架的商品</span><br><span class="line">        <span class="keyword">if</span> (item.deleted!=1) &#123;</span><br><span class="line">          idp.push(item.id)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      var idi = idp.join(<span class="string">','</span>)</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        id: idi</span><br><span class="line">      &#125;)</span><br><span class="line">      console.log(that.data.id)</span><br><span class="line">    &#125;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      list: that.data.list,</span><br><span class="line">      flag: that.data.flag</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<p>三、数量加减</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">// 数量的加</span><br><span class="line"> numjia: <span class="keyword">function</span> (e) &#123;</span><br><span class="line">   console.log(e)</span><br><span class="line">   var that = this</span><br><span class="line">   var index = e.currentTarget.dataset.index</span><br><span class="line">   var spec_key = e.currentTarget.dataset.spec_key</span><br><span class="line">   //无规格增加</span><br><span class="line">   <span class="keyword">if</span> (!spec_key) &#123;</span><br><span class="line">     app.requestFun(config.clientGoodsDetail,<span class="string">'GET'</span>,&#123;goods_id:e.currentTarget.dataset.goods_id&#125;).<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">       console.log(res)</span><br><span class="line">       <span class="keyword">if</span> (res.code == 1) &#123;</span><br><span class="line">         var num = res.data.store_count == null ? Number.MAX_VALUE : res.data.store_count</span><br><span class="line">         var listCount = parseInt(that.data.list[index].goods_num)</span><br><span class="line">         <span class="keyword">if</span> ( listCount &lt; num) &#123;</span><br><span class="line">           that.setData(&#123;</span><br><span class="line">             [`list[<span class="variable">$&#123;index&#125;</span>].goods_num`]: listCount + 1</span><br><span class="line">           &#125;)</span><br><span class="line">           var datas = &#123;</span><br><span class="line">             <span class="built_in">type</span>: <span class="string">'add'</span>,</span><br><span class="line">             id: e.currentTarget.id</span><br><span class="line">           &#125;</span><br><span class="line">           app.requestFun(config.bnum,<span class="string">'POST'</span>,datas).<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">             console.log(<span class="string">'增加操作'</span>,res)</span><br><span class="line">           &#125;)</span><br><span class="line">         &#125; </span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span> (listCount == num) &#123;</span><br><span class="line">           wx.showToast(&#123;</span><br><span class="line">             title: <span class="string">'已到达最大库存'</span>,</span><br><span class="line">             icon: <span class="string">"none"</span></span><br><span class="line">           &#125;)</span><br><span class="line">           <span class="built_in">return</span></span><br><span class="line">         &#125;</span><br><span class="line">         // 点击加号的时候，把属性为<span class="literal">false</span>的全部加起来</span><br><span class="line">         var bs = 0;</span><br><span class="line">         <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (that.data.list[i].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">             bs += (that.data.list[i].shop_price * that.data.list[i].goods_num * 100) / 100</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         that.setData(&#123;</span><br><span class="line">           totle: Math.round(bs * 100) / 100</span><br><span class="line">         &#125;)</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;)</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123; //有规格增加</span><br><span class="line">     var arr = spec_key.split(<span class="string">","</span>)</span><br><span class="line">     var key_spec = arr.reverse().join()</span><br><span class="line">     var myData = &#123;</span><br><span class="line">       goods_id: e.currentTarget.dataset.goods_id,</span><br><span class="line">       key_spec: key_spec,</span><br><span class="line">       spec_key: spec_key</span><br><span class="line">     &#125;</span><br><span class="line">     //获得库存</span><br><span class="line">     app.requestFun(config.bajaxSpecDetails,<span class="string">'POST'</span>,myData).<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">       console.log(res)</span><br><span class="line">       <span class="keyword">if</span> (res.code == 1) &#123;</span><br><span class="line">         var ID = res.data.id</span><br><span class="line">         var num = res.data.store_count == null ? Number.MAX_VALUE : res.data.store_count</span><br><span class="line">         console.log(<span class="string">'还有库存：'</span>,num)</span><br><span class="line">         var listCount = parseInt(that.data.list[index].goods_num)</span><br><span class="line">         <span class="keyword">if</span> ( listCount &lt; num) &#123;</span><br><span class="line">           that.setData(&#123;</span><br><span class="line">             [`list[<span class="variable">$&#123;index&#125;</span>].goods_num`]: listCount + 1</span><br><span class="line">           &#125;)</span><br><span class="line">           // console.log(that.data.list)</span><br><span class="line">           var datas = &#123;</span><br><span class="line">             <span class="built_in">type</span>: <span class="string">'add'</span>,</span><br><span class="line">             id: e.currentTarget.id</span><br><span class="line">           &#125;</span><br><span class="line">           app.requestFun(config.bnum,<span class="string">'POST'</span>,datas).<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">             console.log(<span class="string">'增加操作'</span>,res)</span><br><span class="line">           &#125;)</span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           wx.showToast(&#123;</span><br><span class="line">             title: <span class="string">'库存最多为'</span> + num + <span class="string">'件'</span>,</span><br><span class="line">             icon: <span class="string">"none"</span></span><br><span class="line">           &#125;)</span><br><span class="line">         &#125;</span><br><span class="line">         // 点击加号的时候，把属性为<span class="literal">false</span>的全部加起来</span><br><span class="line">         var bs = 0;</span><br><span class="line">         <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">           <span class="keyword">if</span> (that.data.list[i].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">             bs += (that.data.list[i].shop_price * that.data.list[i].goods_num * 100) / 100</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         that.setData(&#123;</span><br><span class="line">           totle: Math.round(bs * 100) / 100</span><br><span class="line">         &#125;)</span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         wx.showToast(&#123;</span><br><span class="line">           title: res.msg,</span><br><span class="line">           icon: <span class="string">'none'</span></span><br><span class="line">         &#125;)</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;)</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">// 数量的减</span><br><span class="line">  numjian: <span class="keyword">function</span> (e) &#123;</span><br><span class="line">    var that = this</span><br><span class="line">    var index = e.currentTarget.dataset.index</span><br><span class="line">    var listCount = parseInt(that.data.list[index].goods_num)</span><br><span class="line">    <span class="keyword">if</span> (listCount == 1) &#123;</span><br><span class="line">      wx.showToast(&#123;</span><br><span class="line">        title: <span class="string">'数量至少为1'</span>,</span><br><span class="line">        icon: <span class="string">"none"</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">return</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (listCount == 0) &#123;</span><br><span class="line">      wx.showToast(&#123;</span><br><span class="line">        title: <span class="string">'已无库存'</span>,</span><br><span class="line">        icon: <span class="string">"none"</span></span><br><span class="line">      &#125;)</span><br><span class="line">      <span class="built_in">return</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        [`list[<span class="variable">$&#123;index&#125;</span>].goods_num`]: listCount - 1 </span><br><span class="line">      &#125;)</span><br><span class="line">      var datas = &#123;</span><br><span class="line">        <span class="built_in">type</span>: <span class="string">'reduce'</span>,</span><br><span class="line">        id: e.currentTarget.id</span><br><span class="line">      &#125;</span><br><span class="line">      app.requestFun(config.bnum,<span class="string">'POST'</span>,datas).<span class="keyword">then</span>(res =&gt; &#123;</span><br><span class="line">        console.log(<span class="string">'删除操作'</span>,res)</span><br><span class="line">        // 点击减号的时候，把属性为<span class="literal">false</span>的全部加起来</span><br><span class="line">        var bs = 0;</span><br><span class="line">        <span class="keyword">for</span> (var i = 0; i &lt; that.data.list.length; i++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (that.data.list[i].flag == <span class="literal">false</span>) &#123;</span><br><span class="line">            bs += (that.data.list[i].shop_price * that.data.list[i].goods_num * 100) / 100</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">          totle: Math.round(bs * 100) / 100</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p>四、删除<br>选项已经将id组合了起来，只需要调用删除接口即可，然后再次调用购物车列表接口，实现刷新</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubaopay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixinpay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -180,97 +234,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/27/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B4%AD%E7%89%A9%E8%BD%A6%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2020-07-24T08:52:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信小程序对象数组操作（增加商品规格）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C/">微信小程序对象数组操作（增加商品规格）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求截图"><span class="toc-number">1.</span> <span class="toc-text">需求截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#需求实现"><span class="toc-number">2.</span> <span class="toc-text">需求实现</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2020-07-24T08:11:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%80%86%E5%9C%B0%E5%9D%80%E8%A7%A3%E6%9E%90/">小程序逆地址解析</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">微信小程序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -304,8 +380,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
